@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Provider(
+    return ChangeNotifierProvider(
       create: (context) => ControllerUser(),
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
