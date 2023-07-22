@@ -1,4 +1,4 @@
 class ControllerUser {
-  String image = 'assets/images/profile1.jpeg';
-  String name = 'Mohamed Elsayed';
+  String myImage = 'assets/images/profile1.jpeg';
+  String myName = 'Abdeljalil Kchih';
 }

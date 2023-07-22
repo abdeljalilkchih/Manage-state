@@ -10,6 +10,7 @@ class FormUserEdit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // create provider
+    final ControllerUser myUser = Provider.of<ControllerUser>(context);
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -36,9 +37,9 @@ class FormUserEdit extends StatelessWidget {
                 Container(
                   width: 120.h,
                   height: 120.h,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/images/profile1.jpeg'),
+                      image: AssetImage(myUser.myImage),
                       fit: BoxFit.cover,
                     ),
                     shape: BoxShape.circle,
@@ -46,7 +47,7 @@ class FormUserEdit extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 // * user Name
-                Text('Abdeljalil Kchih'),
+                Text(myUser.myName),
                 //  * button
                 ElevatedButton(
                     onPressed: () {}, child: const Text('Change Data'))

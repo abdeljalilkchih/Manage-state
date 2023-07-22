@@ -12,15 +12,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      builder: (context, child) {
-        return const MaterialApp(
-          title: 'Menage State',
-          debugShowCheckedModeBanner: false,
-          home: HomePage(),
-        );
-      },
+    return Provider(
+      create: (context) => ControllerUser(),
+      child: ScreenUtilInit(
+        designSize: const Size(360, 690),
+        builder: (context, child) {
+          return const MaterialApp(
+            title: 'Menage State',
+            debugShowCheckedModeBanner: false,
+            home: HomePage(),
+          );
+        },
+      ),
     );
   }
 }

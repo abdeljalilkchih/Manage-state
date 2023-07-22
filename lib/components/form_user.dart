@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:menage_state/controllers/c_user.dart';
+import 'package:provider/provider.dart';
 
 class FormUser extends StatelessWidget {
   const FormUser({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final ControllerUser myUser = Provider.of<ControllerUser>(context);
+
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -31,9 +35,9 @@ class FormUser extends StatelessWidget {
                 Container(
                   width: 120.h,
                   height: 120.h,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/images/profile1.jpeg'),
+                      image: AssetImage(myUser.myImage),
                       fit: BoxFit.cover,
                     ),
                     shape: BoxShape.circle,
@@ -41,7 +45,7 @@ class FormUser extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 // * user Name
-                const Text('Abdeljalil Kchih'),
+                Text(myUser.myName),
               ],
             ),
           ),
