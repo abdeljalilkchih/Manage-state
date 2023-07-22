@@ -52,6 +52,7 @@ class FormUserEdit extends StatelessWidget {
                 ElevatedButton(
                     onPressed: () {
                       myUser.changMyImage('assets/images/profile2.jpeg');
+                      myUser.changeMyName('Mhemed Kchih');
                     },
                     child: const Text('Change Data'))
               ],
