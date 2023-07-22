@@ -7,7 +7,8 @@ class FormUser extends StatelessWidget {
   const FormUser({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final ControllerUser myUser = Provider.of<ControllerUser>(context);
+    final ControllerUser myUser =
+        Provider.of<ControllerUser>(context, listen: false);
 
     return Container(
       width: double.infinity,
